@@ -1,0 +1,119 @@
+.home-box{
+  height:300px;
+  width:200px;
+}
+#right-home{
+  background: black;
+  position:absolute;
+  left:70%;
+  top:0%;
+  height:100%;
+  width:30%;
+}
+#cv-txt{
+  color:white;
+  position: absolute;
+  top:50%;
+  left:15%;
+  font-size:40px;
+}
+#left-home{
+  background: black;
+  position: absolute;
+  left:0%;
+  height:100%;
+  width:30%;
+}
+#prj-txt{
+  color:white;
+  position: absolute;
+  top:50%;
+  left:15%;
+  font-size:40px;
+}
+#center-home{
+  position: absolute;
+  left:38%;
+  top:40%;
+  width:400px;
+  height:230px;
+}
+#name{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+}
+
+#title{
+  font-style:italic;
+}
+
+.hometext{
+  width:60%;
+  position: absolute;
+  left:10%;
+}
+#home-text{
+  color: aliceblue;
+}
+#project-link{
+  position: absolute;
+}
+#root{
+  height:100%;
+}
+#work{
+  position: relative;
+  left:1500px;
+  margin: 40px;
+  font-size: 30px;
+}
+#stack{
+  position:relative;
+  margin:40px;
+  top:300px;
+  left:100px;
+  font-size: 30px;
+}
+#education{
+  position: relative;
+  margin:30px;
+  left:100px;
+  font-size: 30px;
+}
+#fast-food{
+  position: absolute;
+  top:110px;
+}
+#physical-labour{
+position: absolute;
+left: 400px;
+top:100px;
+width:300px;
+}
+.company{
+font-size:120%;
+text-decoration-line: underline;
+}
+.page-title{
+  position: absolute;
+  text-decoration-style: solid;
+}
+#university{
+position: absolute;
+margin:10px;
+top:100px;
+}
+#transcript{
+position: absolute;
+top:30px;
+left:500px;
+}
+#languages{
+position: absolute;
+left:300px;
+top:80px;
+}
+#databases{
+position: absolute;
+top:90px;
+}
