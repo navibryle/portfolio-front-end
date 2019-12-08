@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import './App';
 class Work extends React.Component {
     render() { 
@@ -8,6 +9,18 @@ class Work extends React.Component {
             <div id = "fast-food">
                 {<Job company = {<code className = "company">A&W</code>} length = {"2013-2015,2017-2018"} position = {"Cook"}/>}<br></br>
                 {<Job company = {<code className = "company">Wendys</code>} length = {"2016-2017"} position = {"Cook"}/>}<br></br>
+=======
+import './App.css';
+class Work extends React.Component {
+    state = {}
+    render() { 
+        return(
+        <div className ="page" id="Work">
+            <h1 className="page-title" >Work Experience</h1>
+            <div id = "fast-food">
+                {<Job company = {<code className = "company">A&W</code>} length = {"2013-2015,2017-2018"} position = {"Cook"}></Job>}<br></br>
+                {<Job company = {<code className = "company">Wendys</code>} length = {"2016-2017"} position = {"Cook"}></Job>}<br></br>
+>>>>>>> 56e991a1238744c83a4d14be68d44f6669486a03
             </div>
             <div id = "physical-labour">
                 {<Job company = {<a className = "company" href = "http://westcoastholsteins.com" target="_blank">Westcoast Holsteins</a>} 

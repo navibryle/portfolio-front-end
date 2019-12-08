@@ -3,11 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "bootstrap": "^4.4.1",
     "react": "^16.11.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
+=======
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+>>>>>>> 56e991a1238744c83a4d14be68d44f6669486a03
     "react-scripts": "3.2.0"
   },
   "scripts": {
