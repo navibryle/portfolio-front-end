@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
 import {Link} from 'react-router-dom'
 import hacker_rank from './Hackerrank_logo.jpg'
 import github from './github_logo.png'
@@ -11,7 +11,7 @@ class Home extends React.Component {
         <div>
             <div id = 'home'>
                 <Link id = "left-home" to = "/Projects">
-                    <p id = 'prj-txt'>Click here to view projects</p>
+                    <p id = 'prj-txt'>Projects</p>
                 </Link>
                 <div id = "center-home">
                     <p className = "hometext">
@@ -25,7 +25,7 @@ class Home extends React.Component {
                         <a href = "http://www.gmail.com" target="_blank"><img id = 'gmail' src = {gmail} alt = "Gmail"/></a>
                 </div>
                 <Link id = "right-home" to = "/Cv">
-                    <p id = "cv-txt">Click here to view Cv</p>
+                    <p id = "cv-txt">Resume</p>
                 </Link>
             </div> 
         </div>);

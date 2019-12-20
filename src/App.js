@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 //pages
-import Cv from './Cv';
-import Projects from './Projects';
-import Home from './Home';
-import ErrorPage from './404';
+import Cv from './pages/Cv';
+import Projects from './pages/Projects';
+import Home from './pages/Home';
+import ErrorPage from './pages/404';
 //pages end
 import {BrowserRouter as Router,
   Switch,

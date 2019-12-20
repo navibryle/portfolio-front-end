@@ -5,13 +5,15 @@ html{
 #cv-txt{
   color:white;
   position: absolute;
-  top:50%;
-  left:15%;
+  top:500px;
+  left:200px;
   font-size:40px;
 }
 #prj-txt{
   color:white;
   position: absolute;
+  top:500px;
+  left:200px;
   font-size:40px;
 }
 #center-home{
@@ -138,7 +140,11 @@ position: absolute;
 top:90px;
 }
 /*===============Cv PAGE END=====================*/
-.home-box{
-  height:300px;
-  width:200px;
+/*===============Projects PAGE=====================*/
+.project-box{
+  background:white;
+  width: 300px;
+  height: 500px;
+  border-radius: 20px;
 }
+/*===============Projects PAGE END=====================*/
