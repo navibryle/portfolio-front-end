@@ -1,0 +1,150 @@
+/*===============HOME PAGE=====================*/
+html{
+  background-color: rgb(33, 34, 36);
+}
+#cv-txt{
+  color:white;
+  position: absolute;
+  top:500px;
+  left:200px;
+  font-size:40px;
+}
+#prj-txt{
+  color:white;
+  position: absolute;
+  top:500px;
+  left:200px;
+  font-size:40px;
+}
+#center-home{
+  position: absolute;
+  left:900px;
+  top:500px;
+  height:100%;
+}
+#right-home{
+  position:absolute;
+  left:70%;
+  top:0%;
+  height:100%;
+  width:500px;
+}
+#left-home{
+  position: absolute;
+  left:0%;
+  height:100%;
+  width:500px;
+}
+#name{
+  font-family: 'Times New Roman', Times, serif;
+  font-size:80px;
+  width: 500px;
+}
+#title{
+  position: absolute;
+  left:60px;
+  font-style:italic;
+}
+.hometext{
+  width:400px;
+  position: absolute;
+  left:10%;
+  font-size: 30px;
+  color: white;
+}
+#contact-bar{
+  position: relative;
+  left: 930px;
+  top:900px;
+  width:300px;
+}
+#hackerrank{
+  position: absolute;
+  height:100px;
+  margin:10px;
+  clip-path: polygon(50% 0%,50% 0,99% 30%,99% 70%,50% 99%,50% 99%,2% 75%,2% 35%)
+}
+#github{
+  position: absolute;
+  margin:10px;
+  left:100px;
+  height:100px;
+  clip-path: circle(95%);
+}
+#gmail{
+  position: absolute;
+  margin:10px;
+  left:210px;
+  top:10px;
+  height:80px;
+}
+/*===============HOME PAGE END=====================*/
+/*===============Cv PAGE=====================*/
+#work{
+  color:white;
+  position: relative;
+  left:1500px;
+  margin: 40px;
+  font-size: 30px;
+}
+#stack{
+  color:white;
+  position:relative;
+  margin:40px;
+  top:300px;
+  left:100px;
+  font-size: 30px;
+}
+#education{
+  color:white;
+  position: relative;
+  margin:30px;
+  left:100px;
+  font-size: 30px;
+}
+#fast-food{
+  position: absolute;
+  top:110px;
+}
+#physical-labour{
+position: absolute;
+left: 400px;
+top:100px;
+width:300px;
+}
+.company{
+font-size:120%;
+text-decoration-line: underline;
+}
+.page-title{
+  position: absolute;
+  text-decoration-style: solid;
+}
+#university{
+position: absolute;
+margin:10px;
+top:100px;
+}
+#transcript{
+position: absolute;
+top:30px;
+left:500px;
+}
+#languages{
+position: absolute;
+left:300px;
+top:80px;
+}
+#databases{
+position: absolute;
+top:90px;
+}
+/*===============Cv PAGE END=====================*/
+/*===============Projects PAGE=====================*/
+.project-box{
+  background:white;
+  width: 300px;
+  height: 500px;
+  border-radius: 20px;
+}
+/*===============Projects PAGE END=====================*/
