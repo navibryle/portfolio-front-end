@@ -16,7 +16,7 @@ class Education extends React.Component{
                 </body>
             </div>
             <div id="transcript">
-                <a href = "[insert manewan transcript here]">Macewan transcript</a><br></br>
+                <a href = "[insert macewan transcript here]">Macewan transcript</a><br></br>
                 <a href = "[insert uofa transcript here]">University of Alberta transcript</a>
             </div>
         </div>

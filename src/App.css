@@ -1,39 +1,39 @@
-/*===============HOME PAGE=====================*/
 html{
-  background-color: rgb(33, 34, 36);
+  height: 100%;
+}
+/*===============HOME PAGE=====================*/
+#home{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(6,1fr);
+  height:100vh;
 }
 #cv-txt{
   color:white;
-  position: absolute;
-  top:500px;
-  left:200px;
   font-size:40px;
+  top:500px;
+  
 }
 #prj-txt{
   color:white;
-  position: absolute;
   top:500px;
-  left:200px;
   font-size:40px;
 }
 #center-home{
-  position: absolute;
-  left:900px;
-  top:500px;
-  height:100%;
+  background: red;
+  grid-column: 2;
+  grid-row: 1/6;
 }
 #right-home{
-  position:absolute;
-  left:70%;
-  top:0%;
-  height:100%;
-  width:500px;
+  grid-column: 3;
+  grid-row: 1/7 ;
+  background: gray;
+  text-align: center;
 }
 #left-home{
-  position: absolute;
-  left:0%;
-  height:100%;
-  width:500px;
+  background: blue;
+  text-align: center;
+  grid-row: 1/7;
 }
 #name{
   font-family: 'Times New Roman', Times, serif;
@@ -41,41 +41,33 @@ html{
   width: 500px;
 }
 #title{
-  position: absolute;
   left:60px;
   font-style:italic;
 }
 .hometext{
   width:400px;
-  position: absolute;
-  left:10%;
   font-size: 30px;
   color: white;
+  text-align: center;
 }
 #contact-bar{
-  position: relative;
-  left: 930px;
-  top:900px;
-  width:300px;
+  background:green;
+  grid-column: 2;
+  grid-row:6/7;
+  text-align: center;
 }
 #hackerrank{
-  position: absolute;
   height:100px;
   margin:10px;
   clip-path: polygon(50% 0%,50% 0,99% 30%,99% 70%,50% 99%,50% 99%,2% 75%,2% 35%)
 }
 #github{
-  position: absolute;
   margin:10px;
-  left:100px;
   height:100px;
   clip-path: circle(95%);
 }
 #gmail{
-  position: absolute;
   margin:10px;
-  left:210px;
-  top:10px;
   height:80px;
 }
 /*===============HOME PAGE END=====================*/
