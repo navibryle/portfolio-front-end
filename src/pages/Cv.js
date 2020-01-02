@@ -3,7 +3,7 @@ import '../App.css';
 class Cv extends React.Component{
     render(){
         return(
-        <div>
+        <div id = 'cv'>
             <div id = 'work'>
                 <Work/>
             </div>
@@ -59,7 +59,12 @@ class Education extends React.Component{
     render(){
         return (
         <div className ="page" >
+            
             <h1 className = "page-title">Education</h1>
+            <div id="transcript">
+                <a href = "[insert manewan transcript here]">Macewan transcript</a><br></br>
+                <a href = "[insert uofa transcript here]">University of Alberta transcript</a>
+            </div>
             <div id = "university">
                 <body>
                     Currently attending University of Alberta as a 3rd year student.<br></br>
@@ -68,10 +73,7 @@ class Education extends React.Component{
                     I am also an acitve user in Hacker rank
                 </body>
             </div>
-            <div id="transcript">
-                <a href = "[insert manewan transcript here]">Macewan transcript</a><br></br>
-                <a href = "[insert uofa transcript here]">University of Alberta transcript</a>
-            </div>
+            
         </div>
         )
     }
@@ -82,21 +84,30 @@ class Languages extends React.Component {
     render() { 
         return (
         <div className ="page">
-            <h1 className = "page-title">Languages and Databases</h1>
-            <div id = "languages">
-                <ul>
-                    <li>Python</li>
-                    <li>Javascript</li>
-                    <li>html</li>
-                    <li>css</li>
-                    <li>React</li>
-                </ul>
-            </div>
-            <div id = "databases">
-                <ul>
-                    <li>SQL</li>
-                    <li>BerkleyDB</li>
-                </ul>
+            <h1 className = "page-title">Technology stack</h1>
+            <div id = "tech">
+                <div class = "tech_heading" id = "languages">
+                    <h4>Languages</h4>
+                    <ul>
+                        <li>Python</li>
+                        <li>Javascript</li>
+                        <li>html</li>
+                        <li>css</li>
+                    </ul>
+                </div>
+                <div class = "tech_heading" id = "databases">
+                    <h4>databases</h4>
+                    <ul>
+                        <li>SQL</li>
+                        <li>BerkleyDB</li>
+                    </ul>
+                </div>
+                <div class = "tech_heading" id = 'frameworks'>
+                    <h4>Frameworks</h4>
+                    <ul>
+                        <li>React</li>
+                    </ul>
+                </div>
             </div>
         </div>  
         );
