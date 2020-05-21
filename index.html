@@ -1,29 +1,51 @@
 <!DOCTYPE html>
-<head>
-    <link rel = "stylesheet" href = "style.css">
-    <script src="https://kit.fontawesome.com/6727f5493e.js" crossorigin="anonymous"></script>
 
-</head>
 <html>
-    <title>Ivan</title>
-    <div class="text-align">
-        <h1 id = "name">Ivan Penales</h1>
-        <h2 id = "title">Software Developer</h2>
-    </div>
+    <head>
+        <link rel = "stylesheet" href = "style.css">
+        <script src="https://kit.fontawesome.com/6727f5493e.js" crossorigin="anonymous"></script>
     
-    <div id = "projects" class = "text-align">
-        Projects
-        <div class="arrow bounce">
-            <span class="fa fa-arrow-down fa-2x" ></span>
-          </div>
-    </div>
-    <div id = "a-project">
-        <img href="" alt="scrrenshot of website">
-        <div id = "desc">
-            <!--this will contain a description of the project-->
+    </head>
+    <title>Ivan</title>
+    <body>
+        <div id = "main-wrapper">
+            <div id = "sticky-filler">
+                safd  
+            </div>
+            <div id = content>
+                <div id = "intro">
+                    <div id = "name" class = "main-text">Ivan Penales</div>
+                    <div id = "title" class = "sub-text">Software Developer</div>
+                    <p id = "intro-text">Hi welcome to my portfolio. Below are a list of all my projects. All web apps have mobile support</p><br></br>
+                    <button id = "contact-button">get in touch</button>
+                </div>
+                
+                <span class = "sticky" >
+                    <span><img src = "github_logo.png" alt = "github_logo" class = "logo-size"></span><br></br>
+                    <span><img src = "gmail_logo.svg" alt = "gmail_logo" class = "logo-size"></span><br></br>
+                    <span><img src = "Hackerrank_logo.jpg" alt = "Hackerrank_logo" class = "logo-size"></span><br></br>
+                    
+                </span>
+                <span id = "project-intro" class = "text-align">
+                    <span class="arrow bounce">
+                        <span class="fa fa-arrow-down fa-2x" ></span>
+                    </span>
+                </span>
+                <div id="projects">
+                    <!--do all this in javascript-->
+                    <div class = "a-project">
+                        <img class = "img_size" src="weather_app.png" alt="scrrenshot of website">
+                        <div id = "desc" class = "text-color">
+                            <!--this will contain a description of the project-->
+                            Weather app is a web app that allows the user to get weather data from various cities at the current time and store it
+                            into a table. Multiple statistics are displayed about the grouped weahter.
+                        </div>
+                        <!-- the next two links will be a link to github and the actual webiste-->
+                        <a src = "" alt = "url to the website"></a>
+                        <a src = "https://github.com/navibryle/web-weather-app" alt = "url to the corresponding github project"></a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- the next two links will be a link to github and the actual webiste-->
-        <a href = "website url" alt = "url to the website"></a>
-        <a href = "github project url" alt = "url to the corresponding github project"></a>
-    </div>
+    </body>
 </html>
