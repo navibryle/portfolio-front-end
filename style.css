@@ -1,17 +1,25 @@
 /*====================wrapper section ========================*/
-#main-wrapper{
-  float: left;
-}
-#sticky-filler{
-  width:30px;
-  height: 100000px;
-}
-#content{
-  overflow:auto;
-}
+
+
+
+
 /*====================wrappers end========================*/
 
 /*====================intro section ========================*/
+html{
+  overflow: auto;
+  background:rgb(0,0,37);
+  overflow-x: hidden;
+  margin:0;
+  padding:0;
+}
+body{
+  width:100vw;
+  height:100vh;
+  margin:0;
+  padding:0;
+  
+}
 .text-align{
     text-align: center;
 }
@@ -22,10 +30,7 @@
   float: left;
   width:auto;
 }
-body{
-  width:100%;
-  height: 100%;
-}
+
 .sticky{
   position: fixed;
   left: 1%;
@@ -36,13 +41,7 @@ body{
   font-size: larger;
   color:rgb(194, 194, 214);
 }
-html{
-  width:100%;
-  height: 100%;
-    overflow-x: auto;
-    overflow-y: auto;
-    background:rgb(0,0,37);
-}
+
 #name{
     font-size: 600%;
     color: rgb(134, 134, 172)
@@ -52,9 +51,9 @@ html{
     color: rgb(225, 225, 234);
 }
 #project-intro{
-    position: relative;
-    top: 85vh;
-    left:10vw;
+    position: absolute;
+    bottom:0;
+    left:50vw;
     font-size: large;
     margin: auto;
     font-weight: bold;
@@ -71,24 +70,25 @@ html{
     text-align: center;
     margin:1%;
     color:rgb(225, 225, 234);
+    display: inline-block;
   }
-  .bounce {
-    -moz-animation: bounce 2s infinite;
-    -webkit-animation: bounce 2s infinite;
-    animation: bounce 2s infinite;
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
   }
-  
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-10px);
-    }
-    60% {
-      transform: translateY(-15px);
-    }
+  40% {
+    transform: translateY(-10px);
   }
+  60% {
+    transform: translateY(-15px);
+  }
+}
   #contact-button{
     background-color: rgb(0,0,37);
     color: rgb(225, 225, 234);
@@ -105,18 +105,26 @@ html{
 /* need to create a box model to contain all the info about
 each individual project*/
 #projects{
-    position: relative;
-    top:90vh;
-    margin:10px;
+    position: absolute;
+    left:8%;
+    top:100vh;
     float: left;
+    margin:10px;
+    display: grid;
+    grid-template-columns: repeat(3,minmax(250px,1fr));
+    grid-template-rows: repeat(auto-fill,auto);
 }
 .img_size{
     max-width: 100%;
     max-height: 100%;
 }
 .a-project{
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
-    grid-template-rows: repeat(2,auto);
+  transition: transform 300ms;
+}
+.a-project-parent:hover{
+  opacity: 50%;
+}
+.a-project:hover{
+  transform: scale(1.05);
 }
 /*====================projects section======================*/
