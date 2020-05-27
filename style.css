@@ -50,7 +50,7 @@ body{
     font-size: 400%;
     color: rgb(225, 225, 234);
 }
-#project-intro{
+#bouncing-arrow{
     position: absolute;
     bottom:0;
     left:50vw;
@@ -61,7 +61,7 @@ body{
 .logo-size{
   height: 50px;
   width:50px;
-
+  font-size: 50px;
 }
 .text-color{
   color:rgb(194, 194, 214)
@@ -99,7 +99,10 @@ body{
     height: 50px;
     font-size: large;
   }
-  
+  .hover-button:hover{
+    transition: color linear;
+    color: rgb(134, 134, 172);
+  }
 /*====================intro section ========================*/
 /*====================projects section======================*/
 /* need to create a box model to contain all the info about
