@@ -7,10 +7,19 @@ Answer: store the y position of each content onto a stack. The top of the stack 
 the window is scrolled we check if the position matches with the position of the element on top of the stack. And then we render each pages slowly
 
 Idea: divide the website into multiple view port size pages and as the user scrolls down recenter all projects.
+
+OOP: each component will be an object each object will have a 
 */
-function dynamic_scroll(){
-    let bouncingArrow = document.getElementById("bouncing-arrow");
-    let intro = document.getElementById("intro");
-    let pos = window.scrollY;
-    window.addEventListener("scroll",removeElem(bouncingArrow))
+
+var bouncingArrow = document.getElementById("bouncing-arrow");
+var mainWrapper = document.getElementById("main-wrapper");
+function disappearOnScroll(){
+    console.log(mainWrapper.scrollTop);
+    if (mainWrapper.scrollTop != 0){
+        bouncingArrow.style["opacity"] = "0";
+    }else{
+        bouncingArrow.style["opacity"] = "100";
+    }
+    
 }
+mainWrapper.addEventListener("scroll",disappearOnScroll);
