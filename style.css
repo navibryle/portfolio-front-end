@@ -231,6 +231,7 @@ each individual project*/
     max-height: 100%;
 }
 .a-project{
+  position: relative;
   transition: transform 300ms;
 }
 .a-project-parent:hover{
@@ -238,5 +239,10 @@ each individual project*/
 }
 .a-project:hover{
   transform: scale(1.05);
+}
+.absolute-center{
+  position:absolute;
+  top:50%;
+  left:50%;
 }
 /*====================projects section======================*/
