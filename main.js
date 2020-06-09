@@ -40,16 +40,20 @@ function copyEmailToClip(){
 function clipBoardNotif(){
     const curWinTop = document.body.scrollTop;
     const viewPortHeight = window.innerHeight;
-    const notifYPos = (viewPortHeight * 0.5) + curWinTop;
-    const notif = `
-    <span id = "notif" style = "position:absolute; left:50%; top:${notifYPos};">
-        Copied ipenales.dev@gmail.com to clipboard
-    </div>`
+    const notifYPos = (viewPortHeight * 0.9) + curWinTop;
+    var notif = document.createElement("span");
+    const notifSpawn = document.getElementById("notif-spawn");
+    notif.id = "notif";
+    notif.className = "text-color notif-border fade-out-2s";
+    notif.textContent = "Copied to clipboard";
+    notifSpawn.appendChild(notif);
+    window.setTimeout(function(){notifSpawn.removeChild(notif)},2*1000);
 }
 function spawnContact() {
     if (button.innerHTML == defaultHTML){
         button.innerHTML = contactHTML;
         copyEmailToClip()
+        clipBoardNotif()
     }else{
         button.innerHTML = defaultHTML;
     }

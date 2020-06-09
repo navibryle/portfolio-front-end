@@ -25,11 +25,13 @@ class Project{
         projectParent.id = `${this._id}`;
         let projectHtml = 
         `<div class = "a-project">
-            <a href = "${this._gitLink}" target = "_blank"><img class = "img_size" src="${this._imgSrc}" alt="scrrenshot of website"></a>
-            <span class = "absolute-center on-hover-vis" id = "${this._id +"links"}">
-                <a style = href = "${this._gitLink}" target = "_blank" class = "oh-hover-vis"><span class="fas fa-arrow-left text-color logo-size hover-button"></span></a>
-                <a href = "${this._gitLink}" target = "_blank" class = "oh-hover-vis"><span class="fab fa-github text-color logo-size hover-button"></span></a>
-            </span>
+            <a href = "${this._gitLink}" target = "_blank" ><img class = "img_size" src="${this._imgSrc}" alt="scrrenshot of website"></a>
+            <div class = "absolute-center text-align">
+                <span class = "on-hover-vis" id = "${this._id +"links"}">
+                    <a  href = "${this._gitLink}" target = "_blank" ><span class="fas fa-arrow-left text-color logo-size hover-button"></span></a>
+                    <a href = "${this._gitLink}" target = "_blank" ><span class="fab fa-github text-color logo-size hover-button"></span></a>
+                </span>
+            </div>
         </div>`;
         projectParent.innerHTML = projectHtml;
         this._parent.appendChild(projectParent);
@@ -44,5 +46,4 @@ class Project{
             project.style["opacity"] = "0";
         });
     }
-    
 }
