@@ -2,10 +2,11 @@
 super is parent class constructor*/
 
 class Project{
-    constructor(name,gitLink,imgSrc,id){
+    constructor(name,gitLink,demoLink,imgSrc,id){
         /*all args are strings*/
         this._name = name;
         this._gitLink = gitLink;
+        this._demoLink = demoLink;
         this._parent = document.getElementById("projects");
         this._imgSrc = imgSrc;
         this._id = id;
@@ -25,10 +26,10 @@ class Project{
         projectParent.id = `${this._id}`;
         let projectHtml = 
         `<div class = "a-project">
-            <a href = "${this._gitLink}" target = "_blank" ><img class = "img_size" src="${this._imgSrc}" alt="scrrenshot of website"></a>
+            <a href = "${this._gitLink}" target = "_blank" class = "expand" ><img class = "img_size" src="${this._imgSrc}" alt="scrrenshot of website"></a>
             <div class = "absolute-center text-align">
-                <span class = "on-hover-vis" id = "${this._id +"links"}">
-                    <a  href = "${this._gitLink}" target = "_blank" ><span class="fas fa-arrow-left text-color logo-size hover-button"></span></a>
+                <span class = "on-hover-vis margin-center" id = "${this._id +"links"}">
+                    <a  href = "${this._demoLink}" target = "_blank" ><span class="fas fa-arrow-left text-color logo-size hover-button"></span></a>
                     <a href = "${this._gitLink}" target = "_blank" ><span class="fab fa-github text-color logo-size hover-button"></span></a>
                 </span>
             </div>

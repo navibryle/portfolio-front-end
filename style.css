@@ -216,23 +216,22 @@ body{
 /* need to create a box model to contain all the info about
 each individual project*/
 #projects{
-    position: relative;
-    text-align: center;
     justify-content: center;
-    height: auto;
-    margin:30px;
     display: grid;
     grid-template-columns: repeat(3,20%);
-    grid-template-rows: repeat(auto,20%);
+    grid-auto-rows: 200px;
     grid-gap:80px;
+    margin:20px;
 }
 .img_size{
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
 }
 .a-project{
   position: relative;
   transition: transform 300ms;
+  width:100%;
+  height: 100%;
 }
 .a-project-parent:hover{
   opacity: 50%;
@@ -241,11 +240,19 @@ each individual project*/
   transform: scale(1.05);
 }
 .absolute-center{
- position: relative;
-  
+  position: absolute;
+  top:40%;
+  left:35%
 }
 .on-hover-vis{
   opacity: 0;
+}
+.expand{
+  position: absolute;
+  top:0;
+  bottom:0;
+  right: 0;
+  left:0;
 }
 /*====================projects section======================*/
 /*====================contact section=======================*/
@@ -261,7 +268,7 @@ each individual project*/
   width:fit-content;
   height: fit-content;
   font-size: large;
-  margin:10px;
+  margin:20px;
 }
 #contact-button:hover{
   color:rgb(134, 134, 172);
