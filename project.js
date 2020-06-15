@@ -38,10 +38,11 @@ class Project{
         this._parent.appendChild(projectParent);
     }
     setHover() {
+        console.log("tried to hover");
         var projectLinks = document.getElementById(this._id);
         var project = document.getElementById(this._id+"links");
         projectLinks.addEventListener("mouseover",function () {
-            project.style["opacity"] = "100%";
+            project.style["opacity"] = "1";
         });
         projectLinks.addEventListener("mouseout",function () {
             project.style["opacity"] = "0";

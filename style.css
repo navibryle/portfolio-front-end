@@ -116,12 +116,12 @@ body{
 @keyframes on-load-downwards{
   0%{
     transform: translateY(-40px);
-    opacity: 30%;
+    opacity: 0.3;
  
   }
   50%{
     transform: translateY(-20px);
-    opacity: 60%;
+    opacity: 0.6;
   }
   100%{
     transform: translateY(0px);
@@ -136,16 +136,16 @@ body{
 @keyframes on-load-upwards{
   0%{
     transform: translateY(40px);
-    opacity: 30%;
+    opacity: 0.3;
  
   }
   50%{
     transform: translateY(20px);
-    opacity: 60%;
+    opacity: 0.6;
   }
   100%{
     transform: translateY(0px);
-    opacity: 100%;
+    opacity: 1;
   }
 }
 .onload-upwards-invis{
@@ -162,16 +162,16 @@ body{
   }
   50%{
     transform: translateY(20px);
-    opacity: 30%;
+    opacity: 0.3;
  
   }
   75%{
     transform: translateY(10px);
-    opacity: 60%;
+    opacity: 0.6;
   }
   100%{
     transform: translateY(0px);
-    opacity: 100%;
+    opacity: 1;
   }
 }
 .fade-in-1s{
@@ -187,22 +187,22 @@ body{
     opacity: 0;
   }
   50%{
-    opacity: 20%;
+    opacity: 0.2;
   }
   60%{
-    opacity: 40%;
+    opacity: 0.4;
   }
   70%{
-    opacity: 60%;
+    opacity: 0.6;
   }
   80%{
-    opacity: 80%;
+    opacity: 0.8;
   }
   90%{
-    opacity: 90%;
+    opacity: 0.9;
   }
   100%{
-    opacity: 100%;
+    opacity: 1;
   }
 }
 .fade-in-3s{
@@ -234,7 +234,7 @@ each individual project*/
   height: 100%;
 }
 .a-project-parent:hover{
-  opacity: 50%;
+  opacity: 0.5;
 }
 .a-project:hover{
   transform: scale(1.05);
@@ -297,25 +297,25 @@ each individual project*/
 }
 @keyframes fade-out{
   0%{
-    opacity: 100;
+    opacity: 1;
   }
   49%{
-    opacity: 80;
+    opacity: 0.8;
   }
   50%{
-    opacity: 60%;
+    opacity: 0.6;
   }
   60%{
-    opacity: 40%;
+    opacity: 0.4;
   }
   70%{
-    opacity: 30%;
+    opacity: 0.3;
   }
   80%{
-    opacity: 20%;
+    opacity: 0.2;
   }
   90%{
-    opacity: 10%;
+    opacity: 0.1;
   }
   100%{
     opacity: 0%;
