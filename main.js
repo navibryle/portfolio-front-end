@@ -10,7 +10,6 @@ function disappearOnScroll(){
 }
 mainWrapper.addEventListener("scroll",disappearOnScroll);
 /*===========intro section end=============*/
-
 /*==========project section================*/
 var idGen = new IdGen();
 var id = idGen.getIdIncrement().toString();
