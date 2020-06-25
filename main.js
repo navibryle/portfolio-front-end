@@ -1,11 +1,18 @@
 /*===========intro section=============*/
 var bouncingArrow = document.getElementById("bouncing-arrow");
 var mainWrapper = document.body;
+
 function disappearOnScroll(){
-    if (mainWrapper.scrollTop != 0){
+    const scrollSupport = 'scrollBehavior' in document.documentElement.style;
+    console.log(!scrollSupport)
+    if ( !scrollSupport) {
         bouncingArrow.style["opacity"] = "0";
     }else{
-        bouncingArrow.style["opacity"] = "100";
+        if (mainWrapper.scrollTop != 0){
+            bouncingArrow.style["opacity"] = "0";
+        }else{
+            bouncingArrow.style["opacity"] = "100";
+        }
     }
 }
 mainWrapper.addEventListener("scroll",disappearOnScroll);
