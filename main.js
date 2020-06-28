@@ -4,7 +4,6 @@ var mainWrapper = document.body;
 
 function disappearOnScroll(){
     const scrollSupport = 'scrollBehavior' in document.documentElement.style;
-    console.log(!scrollSupport)
     if ( !scrollSupport) {
         bouncingArrow.style["opacity"] = "0";
     }else{
@@ -25,8 +24,13 @@ const projects = [["Weather Calculator","https://github.com/navibryle/web-weathe
 ["Youtube Comment","https://github.com/navibryle/youtube-search-api","youtube-api/youtube-api/yt-api-home.html","yt-api.png",idGen.getIdIncrement().toString()]]
 for (var i = 0;i < projects.length;i++){
     let aProject = new Project(projects[i][0],projects[i][1],projects[i][2],projects[i][3],projects[i][4]);
-    aProject.displayProject()
-    aProject.setHover()
+    if (window.matchMedia("(pointer: coarse;)").matches){
+        aProject.displayProjectTap();
+        aProject.setTap();
+    }else{
+       aProject.displayProject();
+        aProject.setHover();
+    }
 }
 /*==========project section end================*/
 /*==========contact button section ============*/
