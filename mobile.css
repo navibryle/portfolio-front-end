@@ -1,3 +1,53 @@
-@media (pointer: coarse){
+/*==================breakpoints============================
+going to have two break points:
+    -when only 2 projects are displayed per row:1200px
+    -when only a single project can displayed per row
+    -ofc by default three projects are displayed per row
     
+=========================================================*/
+/*this file will overwrite existing css rule*/
+@media (max-width:1200px){
+    #projects{
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2,30%);
+        grid-auto-rows: 200px;
+        grid-gap:80px;
+        margin:20px;
+      }
+}
+@media (max-width:800px){
+    #projects{
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(1,50%);
+        grid-auto-rows: 200px;
+        grid-gap:80px;
+        margin:20px;
+      }
+}
+@media (max-width:925px){
+    #intro{
+        left:20px;
+        margin-left: 50px;
+    }
+    /*
+    
+    */
+}
+@media (max-width:595px){
+    #intro{
+        width:100vw;
+        left:0;
+        margin-left:50px;
+    }
+    #intro-text{
+        font-size: 3vw;
+    }
+    #name{
+        font-size: 15vw;
+    }
+    #title{
+        font-size: 8vw;
+    }
 }

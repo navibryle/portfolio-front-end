@@ -40,7 +40,6 @@ body{
   top:300px;
   left:300px;
   float: left;
-  width:auto;
 }
 
 #intro-text{
@@ -262,6 +261,7 @@ each individual project*/
 .z-index-2{
   z-index: 2;
 }
+
 /*====================projects section======================*/
 /*====================contact section=======================*/
 #contact-button-wrapper{
