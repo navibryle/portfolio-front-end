@@ -329,3 +329,55 @@ each individual project*/
     opacity: 0%;
   }
 }
+/*=========================burger menu=========================*/
+/*
+activation-animation
+deactivation-animation
+nav-activation-animation
+nav-deactivation-animation
+nav-activated
+*/
+.menu-logo{
+  font-size: 30px;
+  color: white;
+  z-index: 1;
+}
+#vertical-nav{
+  position: fixed;
+  right:-50px;
+  height: 100vh;
+  width: 50px;
+  z-index: -2;
+  background: green;
+}
+.center{
+  padding-left: 10%;
+}
+.nav-activation-animation{
+  -moz-animation: translateX-50px 2s linear;
+  -webkit-animation: translateX-50px 2s linear;
+  animation: translateX-50px 2s linear;
+}
+.nav-deactivation-animation{
+  -moz-animation: fade-out-50 2s linear;
+  -webkit-animation: fade-out-50 2s linear;
+  animation: fade-out-50 2s linear;
+}
+@keyframes translateX-50px{
+  20%{
+    transform: translateX(-10px);
+  }
+  40%{
+    transform: translateX(-20px)
+  }
+  60%{
+    transform: translateX(-30px);
+  }
+  80%{
+    transform: translateX(-40px);
+  }
+  100%{
+    transform: translateX(-50px);
+  }
+}
+/*=========================burger menu end=====================*/

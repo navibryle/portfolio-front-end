@@ -71,3 +71,14 @@ function spawnContact() {
 }
 button.addEventListener("click",spawnContact);
 /*==========contact button section end=========*/
+//===================test======================
+function displayMenu(){
+    var menu = new Menu();
+    menu.displayLogo();
+    var menuNode = menu.getNode();
+    document.addEventListener("click",function(){
+        menu.activate();
+    })
+}
+displayMenu();
+//==================test end===================
