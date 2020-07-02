@@ -37,7 +37,8 @@ class Menu{
         this._menu.id = "vertical-nav";
         this._menu.className = "nav-activation-animation";
         this._isActive = false;
-        this._parentId = "verical-nav";
+        this._parentId = "nav-parent";
+        this._blackScreen = document.createElement("div");
     }
     addContent(logoLink,link,id){
         var newOption = new Option(logoLink,link,id);
@@ -53,14 +54,16 @@ class Menu{
         }
     }
     activate(){
-        /*a navigatin bar that will take up half the screen will appear 
+        /*
+        screen turns black and navbar comesout successfully
         */
        var parent = document.getElementById(this._parentId);
+       var blackScreen = document.getElementById("black-screen");
        for (var i = 0;i<this._content.length;i++){
-        this._menu.appendChild(this._content[i].getNode())
-    }
-       parent.appendChild(this._menu);
-        
+        this._menu.appendChild(this._content[i].getNode());
+        }
+        blackScreen.classList.add("nav-black-screen-activate");
+        parent.appendChild(this._menu);
     }
     deactivate(){
         //this class will just delete the nav from the dom tree
@@ -73,7 +76,7 @@ class Menu{
         const menuLogo = document.createElement("span");
         const mainWrapper = document.getElementById("main-wrapper");
         menuLogo.id = "menu-logo";
-        menuLogo.className = "fas fa-bars center menu-logo";
+        menuLogo.className = "fas fa-bars menu-logo";
         mainWrapper.appendChild(menuLogo);
     }
     getNode(){

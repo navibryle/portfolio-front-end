@@ -76,7 +76,8 @@ function displayMenu(){
     var menu = new Menu();
     menu.displayLogo();
     var menuNode = menu.getNode();
-    document.addEventListener("click",function(){
+    var logo = document.getElementById("menu-logo");
+    logo.addEventListener("click",function(){
         menu.activate();
     })
 }
