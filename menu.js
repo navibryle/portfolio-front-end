@@ -24,21 +24,21 @@ class Option{
 }
 class Menu{
     /*
-    onclick of the menu change it to x
-        addContent();
-        activate();
-        deactivate();
-        displayAllContent();
-        displayLogo();
+    need to make it so that when the 
     */
-    constructor(){
+    constructor(menuLogo){
+        //menuLogo is the id of the menuLogo and there will be a css selector that defines its position
         this._content = [];
         this._menu = document.createElement("div");
+        this._menuLogo = document.createElement("span");
+        this._blackScreen = document.getElementById("black-screen");
+        this._menuLogo.id = this._menuLogoId;
+        this._menuLogo.className = "fas fa-bars menu-logo";
         this._menu.id = "vertical-nav";
         this._menu.className = "nav-activation-animation";
         this._isActive = false;
-        this._parentId = "nav-parent";
-        this._blackScreen = document.createElement("div");
+        this._navParentId = "nav-parent";
+        this._menuLogoId = menuLogo;
     }
     addContent(logoLink,link,id){
         var newOption = new Option(logoLink,link,id);
@@ -57,29 +57,56 @@ class Menu{
         /*
         screen turns black and navbar comesout successfully
         */
-       var parent = document.getElementById(this._parentId);
-       var blackScreen = document.getElementById("black-screen");
+       var parent = document.getElementById(this._navParentId);
        for (var i = 0;i<this._content.length;i++){
         this._menu.appendChild(this._content[i].getNode());
         }
-        blackScreen.classList.add("nav-black-screen-activate");
+        
+        this._blackScreen.classList.add("nav-black-screen-activate");
         parent.appendChild(this._menu);
+        this._isActive = true;
     }
     deactivate(){
         //this class will just delete the nav from the dom tree
         //might need to create a method that checks if the menu needs to be deactivated
-        var parent = document.getElementById(this._parentId);
-        var child = document.getElementById(this._menu.id);
-        parent.removeChild(child);
-    }
-    displayLogo(){
-        const menuLogo = document.createElement("span");
-        const mainWrapper = document.getElementById("main-wrapper");
-        menuLogo.id = "menu-logo";
-        menuLogo.className = "fas fa-bars menu-logo";
-        mainWrapper.appendChild(menuLogo);
+        var parent = document.getElementById(this._navParentId);
+        var child = this._menu;
+        this._menu.classList.add("nav-deactivation-animation");
+        var object = this;
+        setTimeout(function(){
+            parent.removeChild(child);
+            object._menu.classList.remove("nav-deactivation-animation");
+        },150);
+        this._isActive = false;
+        this._blackScreen.classList.remove("nav-black-screen-activate");
+        
     }
     getNode(){
         return this._menu;
     }
+    addMenuLogoListener(){
+        let object = this;
+        this._menuLogo.addEventListener("click",function (){
+            if (object._isActive === false){
+                object.activate();
+            }
+        });
+        
+        //this._isActive = isActive;
+    }
+    addBlackScreenListener(){
+        let object = this;
+        this._blackScreen.addEventListener("click",function(){
+            if (object._isActive === true){
+                object.deactivate();
+            }
+        });
+    }
+    displayLogo(){
+        this.addMenuLogoListener();
+        this.addBlackScreenListener();
+        const mainWrapper = document.getElementById("main-wrapper");
+        mainWrapper.appendChild(this._menuLogo);
+    }
+    
 }

@@ -336,7 +336,6 @@ each individual project*/
   margin-right: 5px;
   font-size: 30px;
   color: white;
-  z-index: 3;
 }
 .nav-black-screen-activate{
   position: fixed;
@@ -358,17 +357,17 @@ each individual project*/
   padding-left: 10%;
 }
 .nav-activation-animation{
-  -moz-animation: translateX-50px-out 500ms linear;
-  -webkit-animation: translateX-50px-out 500ms linear;
+  -moz-animation: translateX-50px-out 200ms linear;
+  -webkit-animation: translateX-50px-out 200ms linear;
   animation: translateX-50px-out 200ms linear;
 }
 .nav-activated{
   right:0px;
 }
 .nav-deactivation-animation{
-  -moz-animation: translate-50px-in 2s linear;
-  -webkit-animation: translate-50px-in 2s linear;
-  animation: translate-50px-in 2s linear;
+  -moz-animation: translateX-50px-in 200ms linear;
+  -webkit-animation: translateX-50px-in 200ms linear;
+  animation: translateX-50px-in 200ms linear;
 }
 @keyframes translateX-50px-out{
   0%{

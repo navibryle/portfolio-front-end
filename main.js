@@ -73,13 +73,9 @@ button.addEventListener("click",spawnContact);
 /*==========contact button section end=========*/
 //===================test======================
 function displayMenu(){
-    var menu = new Menu();
+    var menu = new Menu("menu-logo");
     menu.displayLogo();
-    var menuNode = menu.getNode();
-    var logo = document.getElementById("menu-logo");
-    logo.addEventListener("click",function(){
-        menu.activate();
-    })
+    
 }
 displayMenu();
 //==================test end===================
