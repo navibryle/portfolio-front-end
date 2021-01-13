@@ -2,22 +2,51 @@
 
 <html>
     <head>
-        <link rel = "stylesheet" href = "style.css">
-        <link rel = "stylesheet" href = "mobile.css">
+        <link rel = "stylesheet" href = "css/style.css">
+        <link rel = "stylesheet" href = "css/mobile.css">
         <script src="https://kit.fontawesome.com/6727f5493e.js" crossorigin="anonymous"></script>
+        <script type = "text/javascript" src = "js/constants.js" defer></script>
+        <script type = "text/javascript" src = "js/misc.js" defer></script>
+        <script type = "text/javascript" src = "js/project.js" defer></script>
+        <script type = "text/javascript" src = "js/menu.js" defer></script>
+        <script type = "text/javascript" src = "js/main.js" defer></script>
     </head>
     <title>Ivan</title>
     <body>
+        <div id = "project-info" class = "hide"></div>
+        <div id = "blurrer" class = "hide" listener = "false"></div>
+        <div id = "resume-canvas" class = "hide"></div>
+        <div id = "about-me-canvas" class = "hide"></div>
         <span id = "black-screen"></span>
         <div id = "nav-parent"></div>
         <div id = "main-wrapper">
-            <div id = "intro">
-                <div id = "name" class = "main-text on-load-downwards">Ivan Penales</div>
-                <div class = "onload-upwards-invis">
-                    <div id = "title" class = "sub-text">Software Developer</div>
-                    <p id = "intro-text">Hi welcome to my portfolio. Below are a list of all my projects.</p><br></br>
-                </div>
-            </div>
+            <span id = "intro">
+                <span id = "intro-info-wrapper">
+                    <div id = "name" class = "main-text on-load-downwards">Ivan Penales</div>
+                    <div class = "onload-upwards-invis">
+                        <p id = "intro-text" >Hi welcome to my portfolio! Below are a list of my projects.</p><br></br>
+                    </div>
+                    
+                </span>
+                <span class = "text-color " id="intro-btn-grp-wrapper">
+                    <div class = "on-load-downwards" >
+                        <button id="resume" class="intro-btn-grp-item">
+                            Resume<span class = "fas fa-scroll"></span>
+                        </button>
+                    </div>
+                    <div class = "on-load-downwards" >
+                        <button id = "about-me" class="intro-btn-grp-item">
+                            About me  <span class= "fas fa-info-circle"></span>
+                        </button>
+                    </div>
+                    <div  class = "text-align" id = "contact-button-wrapper">
+                        <div id = "notif-spawn" class="text-align"></div>
+                        <div class = "on-load-upwards" ><button triggered="false" id = "contact-button" type = "submit" class="intro-btn-grp-item" 
+                        >Get in touch  <span class= "fas fa-info-circle"></span></button></div>
+                    </div>
+                    
+                </span>
+            </span>
             <span id = "bouncing-arrow" class = "text-align fade-in-1s" >
                 <div class="arrow bounce">
                     <span class="fa fa-arrow-down fa-2x" ></span>
@@ -27,13 +56,7 @@
         <span id = "sticky-parent" class = "sticky fade-in-1s">
         </span>
         <div id="projects"></div>
-        <div  class = "text-align" id = "contact-button-wrapper">
-            <div id = "notif-spawn" class="text-align"></div>
-            <button id = "contact-button" type = "submit">get in touch</button>
-        </div>
+        
     </body>
-    <script type = "text/javascript" src = "misc.js"></script>
-    <script type = "text/javascript" src = "project.js"></script>
-    <script type = "text/javascript" src = "menu.js"></script>
-    <script type = "text/javascript" src = "main.js"></script>
+    
 </html>

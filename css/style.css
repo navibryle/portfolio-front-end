@@ -8,7 +8,6 @@
 html{
   position: relative;
   overflow: auto;
-  overflow-x: hidden;
   background:rgb(0,0,37);
   
   min-height: 100%;
@@ -19,7 +18,7 @@ body{
   bottom: 0;
   left:0;
   right:0;
-  overflow: scroll;
+  overflow-x: hidden;
   margin:0;
   padding:0;
 }
@@ -29,19 +28,68 @@ body{
   width: 100%;
 }
 /*====================wrappers end========================*/
-
 /*====================intro section ========================*/
-
 .text-align{
     text-align: center;
 }
-#intro{
-  position: relative;
-  top:300px;
-  left:300px;
-  float: left;
+.about-me-on{
+  position: fixed;
+  margin: auto;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  width:50vw;
+  height:50vh;
+  z-index: 10;
+  border-radius: 10px;
+  background:rgb(0, 0, 54);
+  padding:5%; 
+  font-size: larger;
 }
-
+.about-me-header{
+  text-align: center; 
+  margin-bottom:5%;
+}
+.resume-on{
+  position: fixed;
+  margin: auto;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  width:70vw;
+  height:90vh;
+  z-index: 10;
+}
+#intro-info-wrapper{
+  display:flex; 
+  flex-direction: column;
+}
+#intro-btn-grp-wrapper{
+  text-align: center; 
+  display: flex; 
+  flex-direction: column; 
+  flex-grow: 1; 
+  justify-content: center;
+}
+.intro-btn-grp-item{
+  display: inline-block;
+  margin: 2%; 
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3vh;
+  cursor: pointer;
+}
+.intro-items-disp{
+  display: inline-block;
+}
+#intro{
+  display: flex;
+  flex-direction: row;
+  margin-left: 20%;
+  padding-top: 20%;
+  margin-right: 5%;
+}
 #intro-text{
   font-size: 150%;
   color:rgb(194, 194, 214);
@@ -56,7 +104,7 @@ body{
 }
 #bouncing-arrow{
     position: absolute;
-    bottom:0;
+    bottom:0vh;
     left:50vw;
     font-size: large;
     margin: auto;
@@ -68,11 +116,16 @@ body{
   font-size: 50px;
 }
 .text-color{
-  color:rgb(194, 194, 214)
+  font-family: 'Times New Roman', Times, serif;
+  color:rgb(194, 194, 214);
+}
+.larger-text{
+  font-size: larger;
 }
 .hover-button:hover{
   transition: color linear;
   color: rgb(134, 134, 172);
+  cursor: pointer;
 }
 .sticky{
   position: fixed;
@@ -214,6 +267,88 @@ body{
 /*====================projects section======================*/
 /* need to create a box model to contain all the info about
 each individual project*/
+.hide{
+  visibility: hidden;
+}
+.project-info-on{
+  position: fixed;
+  margin: auto;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  width:50%;
+  height:50%;
+  z-index: 10;
+  border-radius: 10px;
+  display:flex;
+  flex-direction: row;
+}
+#desc-links{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+#proj-description{
+  flex-grow: 2;
+  background:rgb(0, 0, 54);
+}
+#proj-description-text{
+  font-size: larger;
+  margin:5%;
+}
+/*=========tech section===========*/
+#tech-stack-header{
+  text-align: center; 
+  margin-bottom: 5%; 
+  margin-top: 5%;
+}
+#tech-container{
+  margin-top: 2%;
+  margin-bottom: 4%;
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-evenly;
+}
+#tech-logo{
+  flex-grow: 2; 
+  text-align: center;
+}
+#proj-tech-stack{
+  flex-grow: 1;
+  background: rgb(0, 0, 73);
+}
+#tech-description{
+  font-size: larger;
+  flex-grow: 1; 
+  align-self: center; 
+  text-align: center;
+}
+/*=========tech section end ===========*/
+#proj-links{
+  text-align: center;
+  background:  rgb(0, 0, 54);
+}
+
+.margin-top{
+  margin-top: 1%;
+}
+.margin-bottom{
+  margin-bottom: 1%;
+}
+.blurrer-on{
+  position: fixed;
+  margin: auto;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background:black;
+  opacity: 70%;
+}
 #projects{
     justify-content: center;
     display: grid;
@@ -231,6 +366,16 @@ each individual project*/
   transition: transform 300ms;
   width:100%;
   height: 100%;
+  display:flex; 
+  flex-direction:column; 
+  justify-content:center;
+}
+.project-link-wrapper{
+  justify-content:center; 
+  display:flex; 
+  flex-direction:row; 
+  z-index:1; 
+  position:relative;
 }
 .absolute-center{
   position: absolute;
@@ -261,21 +406,44 @@ each individual project*/
 .z-index-2{
   z-index: 2;
 }
-
-/*====================projects section======================*/
-/*====================contact section=======================*/
-#contact-button-wrapper{
-  margin:10px;
+.on-load-resize{
+  -moz-animation: on-load-resize 180ms ease-in;
+  -webkit-animation: on-load-resize 180ms ease-in;
+  animation: on-load-resize 180ms ease-in;
 }
+@keyframes on-load-resize{
+  0%{
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  20%{
+    transform: scale(0.6);
+    opacity: 0.6;
+  }
+  40%{
+    transform: scale(0.7);
+    opacity: 0.7;
+  }
+  60%{
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  80%{
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/*====================projects section end======================*/
+/*====================contact section=======================*/
 #contact-button{
   background-color: rgb(0,0,37);
   color: rgb(225, 225, 234);
   border-radius: 2px;
   border:1px solid rgb(225, 225, 234);
-  cursor: pointer;
-  width:fit-content;
-  height: fit-content;
-  font-size: large;
   margin:20px;
 }
 #contact-button:hover{
@@ -285,7 +453,6 @@ each individual project*/
   font: bolder;
   font-size: larger;
 }
-
 /*====================contact section end===================*/
 /*====================notif=================================*/
 #notif{
