@@ -29,18 +29,26 @@ class Project{
         let projectParent = document.createElement('div');
         projectParent.className += "a-project-parent";
         projectParent.id = `${this._id}`;
-        const demo = this._demoLink === null? '':`<a  href = "${this._demoLink}" target = "_blank" ><span class="fas fa-arrow-left text-color logo-size hover-button"></span></a>`
+        const demo = this._demoLink === null? '':`<a  href = "${this._demoLink}" target = "_blank" ><span class="fas fa-arrow-left text-color logo-size hover-button stop-propagation"></span></a>`
         let projectHtml = 
         `<div class = "a-project">
-            <a href = "${this._gitLink}" target = "_blank" class = "expand" ><img class = "img_size" src="${this._imgSrc}" alt="scrrenshot of website"></a>
+            <div id = "${this._id+"displayInfo"}" target = "_blank" class = "expand" ><img class = "img_size" src="${this._imgSrc}" alt="scrrenshot of website"></div>
                 <div class = "on-hover-vis margin-center project-link-wrapper" id = "${this._id +"links"}">
                     ${demo}
-                    <a href = "${this._gitLink}" target = "_blank" ><span class="fab fa-github text-color logo-size hover-button"></span></a>
+                    <a href = "${this._gitLink}" class = "stop-propagation" target = "_blank" ><span class="fab fa-github text-color logo-size hover-button"></span></a>
                     <span id = "${this._id}Info" class = "fas fa-info-circle logo-size hover-button text-color"></span>
                 </div>
         </div>`;
         projectParent.innerHTML = projectHtml;
         this._parent.appendChild(projectParent);
+        document.getElementById(`${this._id+"displayInfo"}`).addEventListener("click",this.displayProjectInfo)
+        document.getElementById(`${this._id +"links"}`).addEventListener("click",this.displayProjectInfo)
+        const links = document.querySelectorAll(".stop-propagation")
+        links.forEach((elem) => {
+            elem.addEventListener("click",(event) => {
+                event.stopPropagation()
+            })
+        })
         this.setDisplayListerner()
     }
     //==========mobile support =====================
@@ -53,8 +61,8 @@ class Project{
             <img class = "img_size" src="${this._imgSrc}" alt="scrrenshot of website">
             <div class = "absolute-center text-align z-index-2">
                 <span class = "on-hover-vis margin-center" id = "${this._id +"links"}">
-                    <a href = "${this._demoLink}" target = "_blank" ><span class="fas fa-arrow-left text-color logo-size hover-button"></span></a>
-                    <a href = "${this._gitLink}" target = "_blank" ><span class="fab fa-github text-color logo-size hover-button"></span></a>
+                    <a onclick="$(this).stopPropagation();" href = "${this._demoLink}" target = "_blank" ><span class="fas fa-arrow-left text-color logo-size hover-button"></span></a>
+                    <a onclick="$(this).stopPropagation();" href = "${this._gitLink}" target = "_blank" ><span class="fab fa-github text-color logo-size hover-button"></span></a>
                 </span>
             </div>
         </div>`;
@@ -258,7 +266,7 @@ class Project{
         }
     }
     displayProjectInfo(event){
-        //event.stopPropagation()
+        event.stopPropagation()
         const infoRoot = document.getElementById(PROJECT_INFO_ROOT_ID)
         infoRoot.innerHTML = ` 
         <div id = "desc-links">   

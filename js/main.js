@@ -24,7 +24,7 @@ function loadProjects(){
     [
     ["Weather app",
     "https://github.com/navibryle/web-weather-app",
-    "http://localhost:4000/",
+    "https://ipenales.com:4000",
     "images/weather_app.png",
     idGen.getIdIncrement().toString(),
     `Weather app is web app that uses openweather map api  to get a snapshot of the current weather in a city.
@@ -57,9 +57,9 @@ function loadProjects(){
     null,
     "images/riscv-wasm.png",
     idGen.getIdIncrement().toString(),
-    `This is a transpiler that converts a subset of risc-v instructions to wasm source code. This was my last lab in CMPUT 229,
+    `This is a transpiler that converts a subset of risc-v instructions to web assembly source code. This was my last lab in CMPUT 229,
     Computer Organization and Architecture, it was very involved in terms of interpreting the binary representation of instructions and writing assembly code.
-    Details and examples of execution can be seen on the github link.`,
+    Details on how the code is transpiled is on the github page which is linked below.`,
     ["risc-v","bash"]
     ],
     ["Float-conversion",
@@ -67,8 +67,9 @@ function loadProjects(){
     null,
     "images/c.png",
     idGen.getIdIncrement().toString(),
-    `This is a module that will perform floating point operations such as basic arithmetic and converting the float to a string. The float is 16 bits with
-    8 bits for the mantissa, 7 bits for the exponent, and a single bit for the sign more details about the module can be seen in the github page linked below.`,
+    `This is a module that will perform floating point operations such as basic arithmetic and converting a float to a string.This was a project in 
+    CMPUT 201,Practical Programming Methodology. The float is 16 bits with 8 bits for the mantissa, 7 bits for the exponent, 
+    and a single bit for the sign. More details about the module can be seen in the github page linked below.`,
     ["C","bash"]
     ],
     [
@@ -87,7 +88,8 @@ function loadProjects(){
     null,
     "images/sql.webp",
     idGen.getIdIncrement().toString(),
-    `This is a small project that uses the NoSQL database berkeley db. This project generates the index for the dataset in order to perform fast queries.`,
+    `This is a small project that uses the NoSQL database berkeley db.This project was for my CMPUT 291 class,Introduction to File and Database Management. 
+    This project generates the index for the dataset in order to perform fast and efficient queries.`,
     ["berkeley db","python"]
     ]
 ]
