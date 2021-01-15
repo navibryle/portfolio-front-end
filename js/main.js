@@ -24,7 +24,7 @@ function loadProjects(){
     [
     ["Weather app",
     "https://github.com/navibryle/web-weather-app",
-    "http://localhost:4000",
+    "https://ipenales.com:4000",
     "images/weather_app.png",
     idGen.getIdIncrement().toString(),
     `Weather app is web app that uses openweather map api  to get a snapshot of the current weather in a city.
