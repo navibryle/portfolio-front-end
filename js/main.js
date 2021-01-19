@@ -198,7 +198,7 @@ function aboutMeListener(){
         aboutMeCanvas.innerHTML = `
         <h2 class = "about-me-header">About me</h2>
         <p>
-            I am a third year student in the University Of Alberta with a specilization in computing science.
+            I am a third year student in the University of Alberta with a specialization in computing science.
         In addition to my course work which consist mostly of computing science courses, I have also taught
         myself various concepts in web development such as asynchronous programming and the REST api. I am looking
         for an intership, preferably a long term internship starting at May 2021. My expected graduation date is at April 2022.
