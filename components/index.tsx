@@ -2,13 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import IntrosSection from './IntroSection';
-import reportWebVitals from './reportWebVitals';
 import Menu from './Menu'
 import MenuItem from './MenuItem'
 import BouncingArrow from './BouncingArrow';
 import { faHackerrank,faGithub } from '@fortawesome/free-brands-svg-icons';
 import Project from './Project'
-import weathear_app from './img/weather_app.png'
+import weathear_app from './../img/weather_app.png'
 import LeftArrowLink from './LeftArrowLink';
 ReactDOM.render(
   <React.StrictMode>
@@ -44,8 +43,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
