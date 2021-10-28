@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import IntrosSection from './IntroSection';
-import Menu from './Menu'
-import MenuItem from './MenuItem'
-import BouncingArrow from './BouncingArrow';
+import './css/index.css';
+import IntrosSection from './components/IntroSection';
+import Menu from './components/Menu'
+import MenuItem from './components/MenuItem'
+import BouncingArrow from './components/BouncingArrow';
 import { faHackerrank,faGithub } from '@fortawesome/free-brands-svg-icons';
-import Project from './Project'
-import weathear_app from './../img/weather_app.png'
-import LeftArrowLink from './LeftArrowLink';
+import Project from './components/Project'
+import weathear_app from './assets/weather_app.png'
+import LeftArrowLink from './components/LeftArrowLink';
 ReactDOM.render(
   <React.StrictMode>
     <div className="main-wrapper">

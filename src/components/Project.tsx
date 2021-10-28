@@ -14,7 +14,6 @@ const Project :FunctionComponent<ProjectProps> = (props) =>{
             <img src={props.imgSrc} className="img_size" alt="screenshot of website"/>
             <div className="on-hover-vis margin-center project-link-wrapper">
                 {props.children}
-                {/* {props.demo === undefined ? "":props.demo} */}
                 <a href = {props.gitLink} className="stop-propagation" target="_blank" rel="noreferrer">
                     <FontAwesomeIcon icon={faGithub} className="text-color logo-size hover-button"/>
                 </a>
